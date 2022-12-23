@@ -1,0 +1,216 @@
+**FREE
+// -------------------------------------------------------------------------------------------------
+// Description: define constants for use in applications.
+//
+// @author James Brian Hill
+// @copyright Copyright (c) 2015 - 2023 by James Brian Hill
+// @license GNU General Public License version 3
+// @see https://www.gnu.org/licenses/gpl-3.0.en.html Gnu Public License version 3.0
+// @see https://www.ibm.com/docs/en/i/7.5?topic=rpg-ile-reference RPG ILE Reference
+// @see https://www.ibm.com/docs/en/i/7.5?topic=statements-fully-free-form Free Form Statements
+// -------------------------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------------------------
+//   This program is free software: you can redistribute it and/or modify it under the terms of the
+// GNU General Public License as published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+//   This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+// without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+//   You should have received a copy of the GNU General Public License along with this program. If
+// not, see <https://www.gnu.org/licenses/>.
+// -------------------------------------------------------------------------------------------------
+//   This source code was developed at www.pub400.com, a service provided by RZKH GmbH. Thank you!
+// -------------------------------------------------------------------------------------------------
+                                                                                                    
+// -------------------------------------------------------------------------------------------------
+//   This source member is meant to be /COPYd so the following compiler directives are added to
+// prevent this member from being added multiple times.
+//
+// More information about compiler directives:
+// @see https://www.ibm.com/docs/en/i/7.5?topic=concepts-compiler-directives
+//--------------------------------------------------------------------------------------------------
+/IF DEFINED(CONSTANTS)
+  /EOF
+/ELSE
+  /DEFINE CONSTANTS
+/ENDIF
+
+//--------------------------------------------------------------------------------------------------
+// Define constant variables to be used globally.
+// @see https://www.ibm.com/docs/en/i/7.5?topic=statement-free-form-named-constant-definition
+//--------------------------------------------------------------------------------------------------
+
+// A single quote - this is useful for keeping code more readable when we need to concatenate a
+// single quote.
+DCL-C C_QUOTE ''''; // Do NOT use x'7d' (Barbara Morris recommendation)
+
+// FFTDCA controls (Final Form Text Document)
+DCL-C C_FFTDCA_NEWLINE ':/N';
+DCL-C C_FFTDCA_PARAGRAPH ':/P';
+
+// Constants related to display files. (Function Key AIB Bytes)
+// @see https://www.ibm.com/docs/en/i/7.5?topic=area-io-feedback-icf-display-files
+DCL-C C_DSPF_GRN      X'20';
+DCL-C C_DSPF_GRNRI    X'21';
+DCL-C C_DSPF_WHT      X'22';
+DCL-C C_DSPF_WHTRI    X'23';
+DCL-C C_DSPF_GRNUL    X'24';
+DCL-C C_DSPF_GRNULRI  X'25';
+DCL-C C_DSPF_WHTUL    X'26';
+DCL-C C_DSPF_NONDSP   X'27';
+DCL-C C_DSPF_RED      X'28';
+DCL-C C_DSPF_REDRI    X'29';
+DCL-C C_DSPF_REDHI    X'2A';
+DCL-C C_DSPF_REDHIRI  X'2B';
+DCL-C C_DSPF_REDUL    X'2C';
+DCL-C C_DSPF_REDULRI  X'2D';
+DCL-C C_DSPF_REDULBL  X'2E';
+DCL-C C_DSPF_NONDSP2  X'2F';
+DCL-C C_DSPF_TRQCOL   X'30';
+DCL-C C_DSPF_TRQRICOL X'31';
+DCL-C C_DSPF_YLWCOL   X'32';
+DCL-C C_DSPF_YLWRICOL X'33';
+DCL-C C_DSPF_TRQULCOL X'34';
+DCL-C C_DSPF_TRQULRICOL X'35';
+DCL-C C_DSPF_YLWULCOL X'36';
+DCL-C C_DSPF_NONDSP3  X'37';
+DCL-C C_DSPF_PNK      X'38';
+DCL-C C_DSPF_PNKRI    X'39';
+DCL-C C_DSPF_BLU      X'3A';
+DCL-C C_DSPF_BLURI    X'3B';
+DCL-C C_DSPF_PNKUL    X'3C';
+DCL-C C_DSPF_PNKULRI  X'3D';
+DCL-C C_DSPF_BLUUL    X'3E';
+DCL-C C_DSPF_NONDSP4  X'3F';
+                            
+DCL-C C_DSPF_F01      X'31';
+DCL-C C_DSPF_F02      X'32';
+DCL-C C_DSPF_F03      X'33';
+DCL-C C_DSPF_F04      X'34';
+DCL-C C_DSPF_F05      X'35';
+DCL-C C_DSPF_F06      X'36';
+DCL-C C_DSPF_F07      X'37';
+DCL-C C_DSPF_F08      X'38';
+DCL-C C_DSPF_F09      X'39';
+DCL-C C_DSPF_F10      X'3A';
+DCL-C C_DSPF_F11      X'3B';
+DCL-C C_DSPF_F12      X'3C';
+DCL-C C_DSPF_AUTO_ENTER X'3F'; // for Selector Light Pen
+DCL-C C_DSPF_F13      X'B1';
+DCL-C C_DSPF_F14      X'B2';
+DCL-C C_DSPF_F15      X'B3';
+DCL-C C_DSPF_F16      X'B4';
+DCL-C C_DSPF_F17      X'B5';
+DCL-C C_DSPF_F18      X'B6';
+DCL-C C_DSPF_F19      X'B7';
+DCL-C C_DSPF_F20      X'B8';
+DCL-C C_DSPF_F21      X'B9';
+DCL-C C_DSPF_F22      X'BA';
+DCL-C C_DSPF_F23      X'BB';
+DCL-C C_DSPF_F24      X'BC';
+DCL-C C_DSPF_CLEAR    X'BD';
+DCL-C C_DSPF_ENTER    X'F1';
+DCL-C C_DSPF_HELP     X'F3';
+DCL-C C_DSPF_ROLLDOWN X'F4';  // Pageup
+DCL-C C_DSPF_ROLLUP   X'F5';  // Pagedown
+DCL-C C_DSPF_PRINT    X'F6';
+DCL-C C_DSPF_HOME     X'F8';
+// Define some common sizes using the ISO/IEC 80000 standard.
+// @see https://en.wikipedia.org/wiki/ISO/IEC_80000
+// @see https://en.wikipedia.org/wiki/Binary_prefix
+DCL-C C_SIZE_1K 1024;              // 1 kibibyte
+DCL-C C_SIZE_2K 2048;
+DCL-C C_SIZE_4K 4096;
+DCL-C C_SIZE_8K 8192;
+DCL-C C_SIZE_16K 16384;
+DCL-C C_SIZE_32K 32768;
+DCL-C C_SIZE_64K 65536;
+DCL-C C_SIZE_128K 131072;
+DCL-C C_SIZE_256K 262144;
+DCL-C C_SIZE_512K 524288;
+DCL-C C_SIZE_1M 1048576;           // 1 mebibyte
+DCL-C C_SIZE_2M 2097152;
+DCL-C C_SIZE_4M 4194304;
+DCL-C C_SIZE_8M 8388608;
+DCL-C C_SIZE_16M 16777216;
+DCL-C C_SIZE_32M 33554432;
+DCL-C C_SIZE_64M 67108864;
+DCL-C C_SIZE_128M 134217728;
+DCL-C C_SIZE_256M 268436456;
+DCL-C C_SIZE_512M 536870912;
+DCL-C C_SIZE_1G 1073741824;        // 1 gibibyte
+DCL-C C_SIZE_2G 2147483648;
+DCL-C C_SIZE_4G 4294967296;
+DCL-C C_SIZE_8G 8589934592;
+DCL-C C_SIZE_16G 17179869184;
+DCL-C C_SIZE_32G 34359738368;
+DCL-C C_SIZE_64G 68719476736;
+DCL-C C_SIZE_128G 137438953472;
+DCL-C C_SIZE_256G 274877906944;
+DCL-C C_SIZE_512G 549755813888;
+DCL-C C_SIZE_1T 1099511627776;     // 1 tebibyte
+DCL-C C_SIZE_2T 2199023255552;
+DCL-C C_SIZE_4T 4398046511104;
+DCL-C C_SIZE_8T 8796093022208;
+DCL-C C_SIZE_16T 17592186044416;
+DCL-C C_SIZE_32T 35184372088832;
+DCL-C C_SIZE_64T 70368744177664;
+DCL-C C_SIZE_128T 140737488355328;
+DCL-C C_SIZE_256T 281474976710656;
+DCL-C C_SIZE_512T 562949953421312;
+DCL-C C_SIZE_1P 1125899906842624;  // 1 pebibyte
+
+// SQLSTATE class values
+// @see https://www.ibm.com/docs/en/i/7.5?topic=codes-listing-sqlstate-class
+DCL-C C_SQLSTATE_WARNING '01'; // Warnings
+DCL-C C_SQLSTATE_NO_DATA '02'; // No data
+DCL-C C_SQLSTATE_DYNAMIC_SQL_ERROR '07';
+DCL-C C_SQLSTATE_CONNECTION_EXCEPTION '08';
+DCL-C C_SQLSTATE_TRIGGERED_ACTION_EXCEPTION '09';
+DCL-C C_SQLSTATE_FEATURE_NOT_SUPPORTED '0A';
+DCL-C C_SQLSTATE_INVALID_SCHEMA_NAME_LIST_SPEC '0E';
+DCL-C C_SQLSTATE_INVALID_TOKEN '0F';
+DCL-C C_SQLSTATE_RESIGNAL_WHEN_HANDLER_NOT_ACTIVE '0K';
+DCL-C C_SQLSTATE_SQL_XML_MAPPING_ERROR '0N';
+DCL-C C_SQLSTATE_PROHIBITED_STATEMENT_DURING_TRIGGER '0W';
+DCL-C C_SQLSTATE_DIAGNOSTICS_EXCEPTION '0Z';
+DCL-C C_SQLSTATE_XQUERY_ERROR '10';
+DCL-C C_SQLSTATE_CASE_NOT_FOUND_FOR_CASE_STATMENT '20';
+DCL-C C_SQLSTATE_CARDINALITY_VIOLATION '21';
+DCL-C C_SQLSTATE_DATA_EXCEPTION '22';
+DCL-C C_SQLSTATE_CONSTRAINT_VIOLATION '23';
+DCL-C C_SQLSTATE_INVALID_CURSOR_STATE '24';
+DCL-C C_SQLSTATE_INVALID_TRANSACTION_STATE '25';
+DCL-C C_SQLSTATE_INVALID_SQL_STATEMENT_IDENTIFIER '26';
+DCL-C C_SQLSTATE_TRIGGERED_DATA_CHANGE_VIOLATION '27';
+DCL-C C_SQLSTATE_INVALID_AUTHORIZATION_SPECIFICATION '28';
+DCL-C C_SQLSTATE_INVALID_TRANSACTION_TERMINATION '2D';
+DCL-C C_SQLSTATE_INVALID_CONNECTION_NAME '2E';
+DCL-C C_SQLSTATE_SQL_FUNCTION_EXCEPTION '2F';
+DCL-C C_SQLSTATE_INVALID_SQL_DESCRIPTOR_NAME '33';
+DCL-C C_SQLSTATE_INVALID_CURSOR_NAME '34';
+DCL-C C_SQLSTATE_INVALID_CONDITION_NUMBER '35';
+DCL-C C_SQLSTATE_CURSOR_SENSITIVITY_EXCEPTION '36';
+DCL-C C_SQLSTATE_EXTERNAL_FUNCTION_EXCEPTION '38';
+DCL-C C_SQLSTATE_EXTERNAL_FUNCTION_CALL_EXCEPTION '39';
+DCL-C C_SQLSTATE_SAVEPOINT_EXCEPTION '3B';
+DCL-C C_SQLSTATE_AMBIGUOUS_CURSOR_NAME '3C';
+DCL-C C_SQLSTATE_INVALID_SCHEMA_NAME '3F';
+DCL-C C_SQLSTATE_SYNTAX_ERROR_OR_ACCESS_RULE_VIOLATION '42';
+DCL-C C_SQLSTATE_WITH_CHECK_OPTION_VIOLATION '44';
+DCL-C C_SQLSTATE_JAVA_ERRORS '46';
+DCL-C C_SQLSTATE_INVALID_APPLICATION_STATE '51';
+DCL-C C_SQLSTATE_INVALID_OPERAND_OR_INCONSISTENT_SPEC '53';
+DCL-C C_SQLSTATE_SQL_OR_PRODUCT_LIMIT_EXCEEDED '54';
+DCL-C C_SQLSTATE_OBJECT_NOT_IN_PREREQUISITE_STATE '55';
+DCL-C C_SQLSTATE_MISCELLANEOUS_SQL_OR_PRODUCT_ERROR '56';
+DCL-C C_SQLSTATE_RESOURCE_NOT_AVAILABLE_OR_OPERATOR '57';
+DCL-C C_SQLSTATE_SYSTEM_ERROR '58';
+DCL-C C_SQLSTATE_COMMON_UTILITIES_AND_TOOLS '5UA';
+
+// Partial listing of specific SQLSTATE values.
+// @see https://www.ibm.com/docs/en/i/7.5?topic=codes-listing-sqlstate-values
+DCL-C C_SQLSTATE_OK '00000'; // Unqualified success

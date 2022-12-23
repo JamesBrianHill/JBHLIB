@@ -1,0 +1,125 @@
+**FREE
+// -------------------------------------------------------------------------------------------------
+// Description: Define constants for HTTP status codes.
+//
+// @author James Brian Hill
+// @copyright Copyright (c) 2015 - 2023 by James Brian Hill
+// @license GNU General Public License version 3
+// @see https://www.gnu.org/licenses/gpl-3.0.en.html Gnu Public License version 3.0
+// -------------------------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------------------------
+//   This program is free software: you can redistribute it and/or modify it under the terms of the
+// GNU General Public License as published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+//   This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+// without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+//   You should have received a copy of the GNU General Public License along with this program. If
+// not, see <https://www.gnu.org/licenses/>.
+// -------------------------------------------------------------------------------------------------
+//   This source code was developed at www.pub400.com, a service provided by RZKH GmbH. Thank you!
+// -------------------------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------------------------
+//   This source member is meant to be /COPYd so the following compiler directives are added to
+// prevent this member from being added multiple times.
+//
+// More information about compiler directives:
+// @see https://www.ibm.com/docs/en/i/7.5?topic=concepts-compiler-directives
+// -------------------------------------------------------------------------------------------------
+/IF DEFINED(HTTPSTS)
+  /EOF
+/ELSE
+  /DEFINE HTTPSTS
+/ENDIF
+
+// -------------------------------------------------------------------------------------------------
+// 1xx - Informational Responses
+// -------------------------------------------------------------------------------------------------
+DCL-C C_HTTP_100_CONTINUE 'HTTP/1.1 100 Continue'; // Continue
+DCL-C C_HTTP_101_SWITCHING_PROTOCOLS 'HTTP/1.1 101 Switching protocols';
+DCL-C C_HTTP_102_PROCESSING 'HTTP/1.1 102 Processing'; // WebDAV - RFC 2518
+DCL-C C_HTTP_103_EARLY_HINTS 'HTTP/1.1 Early hints'; // RFC 8297
+
+// -------------------------------------------------------------------------------------------------
+// 2xx - Success Responses
+// Note: 200, 201, 202, 204 are valid for IBM Integrated Web Services Server.
+// -------------------------------------------------------------------------------------------------
+DCL-C C_HTTP_200_OK 'HTTP/1.1 200 Ok';
+DCL-C C_HTTP_201_CREATED 'HTTP/1.1 201 Created';
+DCL-C C_HTTP_202_ACCEPTED 'HTTP/1.1 202 Accepted';
+DCL-C C_HTTP_203_NON_AUTHORITATIVE_INFORMATION 'HTTP/1.1 203 Non-authoritative information';
+DCL-C C_HTTP_204_NO_CONTENT 'HTTP/1.1 204 No content';
+DCL-C C_HTTP_205_RESET_CONTENT 'HTTP/1.1 205 Reset content';
+DCL-C C_HTTP_206_PARTIAL_CONTENT 'HTTP/1.1 206 Partial content';
+DCL-C C_HTTP_207_MUTLISTATUS 'HTTP/1.1 207 Multi-status'; // WebDAV - RFC 4918
+DCL-C C_HTTP_208_ALREADY_REPORTED 'HTTP/1.1 208 Already reported'; // WebDAV - RFC 5842
+DCL-C C_HTTP_226_IM_USED 'HTTP/1.1 226 IM used'; // RFC 3229
+
+// -------------------------------------------------------------------------------------------------
+// 3xx - Redirection Responses
+// Note: 301, 303, 304, 307 are valid for IBM Integrated Web Services Server.
+// -------------------------------------------------------------------------------------------------
+DCL-C C_HTTP_300_MULTIPLE_CHOICES 'HTTP/1.1 300 Multiple choices';
+DCL-C C_HTTP_301_MOVED_PERMANENTLY 'HTTP/1.1 301 Moved permanently';
+DCL-C C_HTTP_302_FOUND 'HTTP/1.1 302 Found'; // previously "Moved temporarily"
+DCL-C C_HTTP_303_SEE_OTHER 'HTTP/1.1 303 See other';
+DCL-C C_HTTP_304_NOT_MODIFIED 'HTTP/1.1 304 Not modified';
+DCL-C C_HTTP_305_USE_PROXY 'HTTP/1.1 305 Use proxy';
+DCL-C C_HTTP_306_SWITCH_PROXY 'HTTP/1.1 306 Switch proxy';
+DCL-C C_HTTP_307_TEMPORARY_REDIRECT 'HTTP/1.1 307 Temporary redirect';
+DCL-C C_HTTP_308_PERMANENT_REDIRECT 'HTTP/1.1 308 Permanent redirect';
+
+// -------------------------------------------------------------------------------------------------
+// 4xx - Client Error Responses
+// Note: 400, 401, 403, 404, 406, 409, 410, 412, 415 are valid for IBM Integrated Web Services
+// Server.
+// -------------------------------------------------------------------------------------------------
+DCL-C C_HTTP_400_BAD_REQUEST 'HTTP/1.1 400 Bad request';
+DCL-C C_HTTP_401_UNAUTHORIZED 'HTTP/1.1 401 Unauthorized'; // actually means unauthenticated
+DCL-C C_HTTP_402_PAYMENT_REQUIRED 'HTTP/1.1 402 Payment required';
+DCL-C C_HTTP_403_FORBIDDEN 'HTTP/1.1 403 Forbidden'; // means user is not authorized
+DCL-C C_HTTP_404_NOT_FOUND 'HTTP/1.1 404 Not found';
+DCL-C C_HTTP_405_METHOD_NOT_ALLOWED 'HTTP/1.1 405 Method not allowed';
+DCL-C C_HTTP_406_NOT_ACCEPTABLE 'HTTP/1.1 406 Not acceptable';
+DCL-C C_HTTP_407_PROXY_AUTH_REQUIRED 'HTTP/1.1 407 Proxy authentation required'; // RFC 7235
+DCL-C C_HTTP_408_REQUEST_TIMEOUT 'HTTP/1.1 408 Request timeout';
+DCL-C C_HTTP_409_CONFLICT 'HTTP/1.1 409 Conflict'; // duplicate key
+DCL-C C_HTTP_410_GONE 'HTTP/1.1 410 Gone';
+DCL-C C_HTTP_411_LENGTH_REQUIRED 'HTTP/1.1 411 Length required';
+DCL-C C_HTTP_412_PRECONDITION_FAILED 'HTTP/1.1 412 Precondition failed'; // RFC 7232
+DCL-C C_HTTP_413_PAYLOAD_TOO_LARGE 'HTTP/1.1 413 Payload too large'; // RFC 7231
+DCL-C C_HTTP_414_URI_TOO_LONG 'HTTP/1.1 414 URI too long'; // RFC 7231
+DCL-C C_HTTP_415_UNSUPPORTED_MEDIA_TYPE 'HTTP/1.1 415 Unsupported media type'; // RFC 7231
+DCL-C C_HTTP_416_RANGE_NOT_SATISFIABLE 'HTTP/1.1 416 Range not satisfiable'; // RFC 7233
+DCL-C C_HTTP_417_EXPECTATION_FAILED 'HTTP/1.1 417 Expectation failed';
+DCL-C C_HTTP_418_TEAPOT 'HTTP/1.1 418 I am a teapot'; // RFC 2324, RFC 7168
+DCL-C C_HTTP_421_MISDIRECTED_REQUEST 'HTTP/1.1 421 Misdirected request'; // RFC 7540
+DCL-C C_HTTP_422_UNPROCESSABLE_ENTITY 'HTTP/1.1 422 Unprocessable entity'; // WebDAV - RFC 4918
+DCL-C C_HTTP_423_LOCKED 'HTTP/1.1 423 Locked'; // WebDAV - RFC 4918
+DCL-C C_HTTP_424_FAILED_DEPENDENCY 'HTTP/1.1 424 Failed dependency'; // WebDAV - RFC 4918
+DCL-C C_HTTP_425_TOO_EARLY 'HTTP/1.1 425 Too early'; // RFC 8470
+DCL-C C_HTTP_426_UPGRADE_REQUIRED 'HTTP/1.1 426 Upgrade required';
+DCL-C C_HTTP_428_PRECONDITION_REQUIRED 'HTTP/1.1 428 Precondition required'; // RFC 6585
+DCL-C C_HTTP_429_TOO_MANY_REQUESTS 'HTTP/1.1 429 Too many requests'; // RFC 6585
+DCL-C C_HTTP_431_HEADER_TOO_LARGE 'HTTP/1.1 Request header fields too large'; // RFC 6585
+DCL-C C_HTTP_451_UNAVAILABLE_LEGAL 'HTTP/1.1 Unavailable for legal reasons'; // RFC 7725
+
+// -------------------------------------------------------------------------------------------------
+// 5xx - Server Error Responses
+// Note: 500, 503 are valid for IBM Integrated Web Services Server.
+// -------------------------------------------------------------------------------------------------
+DCL-C C_HTTP_500_INTERNAL_SERVER_ERROR 'HTTP/1.1 500 Internal Server Error';
+DCL-C C_HTTP_501_NOT_IMPLEMENTED 'HTTP/1.1 501 Not Implemented';
+DCL-C C_HTTP_502_BAD_GATEWAY 'HTTP/1.1 502 Bad Gateway';
+DCL-C C_HTTP_503_SERVICE_UNAVAILABLE 'HTTP/1.1 Service unavailable';
+DCL-C C_HTTP_504_GATEWAY_TIMEOUT 'HTTP/1.1 Gateway timeout';
+DCL-C C_HTTP_505_HTTP_VERSION_NOT_SUPPORTED 'HTTP/1.1 HTTP version not supported';
+DCL-C C_HTTP_506_VARIANT_ALSO_NEGOTIATES 'HTTP/1.1 Variant also negotiates'; // RFC 2295
+DCL-C C_HTTP_507_INSUFFICIENT_STORAGE 'HTTP/1.1 Insufficient storage'; // WebDAV - RFC 4918
+DCL-C C_HTTP_508_LOOP_DETECTED 'HTTP/1.1 Loop detected'; // WebDAV - RFC 5842
+DCL-C C_HTTP_510_NOT_EXTENDED 'HTTP/1.1 Not extended'; // RFC 2774
+DCL-C C_HTTP_511_NETWORK_AUTH_REQUIRED 'HTTP/1.1 Network authentication required'; // RFC 6585

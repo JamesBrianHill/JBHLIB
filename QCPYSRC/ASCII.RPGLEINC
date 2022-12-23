@@ -1,0 +1,172 @@
+**FREE
+// -------------------------------------------------------------------------------------------------
+// Description: Define constants for ASCII (CCSID 819) characters.
+//
+// @author James Brian Hill
+// @copyright Copyright (c) 2015 - 2023 by James Brian Hill
+// @license GNU General Public License version 3
+// @see https://www.gnu.org/licenses/gpl-3.0.en.html Gnu Public License version 3.0
+// -------------------------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------------------------
+//   This program is free software: you can redistribute it and/or modify it under the terms of the
+// GNU General Public License as published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+//   This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+// without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+//   You should have received a copy of the GNU General Public License along with this program. If
+// not, see <https://www.gnu.org/licenses/>.
+// -------------------------------------------------------------------------------------------------
+//   This source code was developed at www.pub400.com, a service provided by RZKH GmbH. Thank you!
+// -------------------------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------------------------
+//   This source member is meant to be /COPYd so the following compiler directives are added to
+// prevent this member from being added multiple times.
+//
+// More information about compiler directives:
+// @see https://www.ibm.com/docs/en/i/7.5?topic=concepts-compiler-directives
+// -------------------------------------------------------------------------------------------------
+/IF DEFINED(ASCII)
+  /EOF
+/ELSE
+  /DEFINE ASCII
+/ENDIF
+
+//--------------------------------------------------------------------------------------------------
+// Define constant variables to be used globally.
+// @see https://www.ibm.com/docs/en/i/7.5?topic=statement-free-form-named-constant-definition
+//--------------------------------------------------------------------------------------------------
+
+// ASCII codes.                                                                        
+DCL-C C_ASCII_NULL                   x'00'; // NULL                      (EBCDIC x'00')
+DCL-C C_ASCII_START_OF_HEADING       x'01'; // Start of heading          (EBCDIC x'01')
+DCL-C C_ASCII_START_OF_TEXT          x'02'; // Start of text             (EBCDIC x'02')
+DCL-C C_ASCII_END_OF_TEXT            x'03'; // End of text               (EBCDIC x'03')
+DCL-C C_ASCII_END_OF_TRANSMISSION    x'04'; // End of transmission       (EBCDIC x'37')
+DCL-C C_ASCII_ENQUIRY                x'05'; // Enquiry                   (EBCDIC x'2D')
+DCL-C C_ASCII_ACKNOWLEDGE            x'06'; // Acknowledge               (EBCDIC x'2E')
+DCL-C C_ASCII_BELL                   x'07'; // Bell                      (EBCDIC x'2F')
+DCL-C C_ASCII_BACKSPACE              x'08'; // Backspace                 (EBCDIC x'16')
+DCL-C C_ASCII_HORIZONTAL_TAB         x'09'; // Horizontal tab            (EBCDIC x'05')
+DCL-C C_ASCII_LINE_FEED              x'0A'; // Line feed                 (EBCDIC x'25')
+DCL-C C_ASCII_VERTICAL_TAB           x'0B'; // Vertical tab              (EBCDIC x'0B')
+DCL-C C_ASCII_FORM_FEED              x'0C'; // Form feed                 (EBCDIC x'0C')
+DCL-C C_ASCII_CARRIAGE_RETURN        x'0D'; // Carriage return           (EBCDIC x'0D')
+DCL-C C_ASCII_SHIFT_OUT              x'0E'; // Shift out                 (EBCDIC x'0E')
+DCL-C C_ASCII_SHIFT_IN               x'0F'; // Shift in                  (EBCDIC x'0F')
+DCL-C C_ASCII_DATA_LINK_ESCAPE       x'10'; // Data link escape          (EBCDIC x'10')
+DCL-C C_ASCII_DEVICE_CONTROL_1       x'11'; // Device control 1          (EBCDIC x'11')
+DCL-C C_ASCII_DEVICE_CONTROL_2       x'12'; // Device control 2          (EBCDIC x'12')
+DCL-C C_ASCII_DEVICE_CONTROL_3       x'13'; // Device control 3          (EBCDIC x'13')
+DCL-C C_ASCII_DEVICE_CONTROL_4       x'14'; // Device control 4          (EBCDIC x'3C')
+DCL-C C_ASCII_NEGATIVE_ACKNOWLEDGE   x'15'; // Negative acknowledge
+DCL-C C_ASCII_SYNCHRONOUS_IDLE       x'16'; // Synchronous idle
+DCL-C C_ASCII_END_TRANSMISSION_BLOCK x'17'; // End of transmission block
+DCL-C C_ASCII_CANCEL                 x'18'; // Cancel
+DCL-C C_ASCII_END_MEDIUM             x'19'; // End of medium
+DCL-C C_ASCII_SUBSTITUTE             x'1A'; // Substitute
+DCL-C C_ASCII_ESCAPE                 x'1B'; // Escape
+DCL-C C_ASCII_FILE_SEPARATOR         x'1C'; // File separator
+DCL-C C_ASCII_GROUP_SEPARATOR        x'1D'; // Group separator
+DCL-C C_ASCII_RECORD_SEPARATOR       x'1E'; // Record separator
+DCL-C C_ASCII_UNIT_SEPARATOR         x'1F'; // Unit separator
+DCL-C C_ASCII_SPACE                  x'20'; // Space
+DCL-C C_ASCII_EXCLAMATION_POINT      x'21'; // Exclamation point
+DCL-C C_ASCII_DOUBLE_QUOTE           x'22'; // Double quote
+DCL-C C_ASCII_OCTOTHORPE             x'23'; // Octothorpe symbol (number/hash/pound sign)
+DCL-C C_ASCII_DOLLAR_SYMBOL          x'24'; // Dollar symbol
+DCL-C C_ASCII_PERCENT_SYMBOL         x'25'; // Percent symbol
+DCL-C C_ASCII_AMPERSAND_SYMBOL       x'26'; // Ampersand symbol
+DCL-C C_ASCII_SINGLE_QUOTE           x'27'; // Single quote
+DCL-C C_ASCII_LEFT_PARENTHESIS       x'28'; // Left parenthesis
+DCL-C C_ASCII_RIGHT_PARENTHESIS      x'29'; // Right parenthesis
+DCL-C C_ASCII_ASTERISK_SYMBOL        x'2A'; // Asterisk symbol
+DCL-C C_ASCII_PLUS_SIGN              x'2B'; // Plus sign
+DCL-C C_ASCII_COMMA                  x'2C'; // Comma
+DCL-C C_ASCII_MINUS_SIGN             x'2D'; // Minus sign
+DCL-C C_ASCII_PERIOD                 x'2E'; // Period
+DCL-C C_ASCII_FORWARD_SLASH          x'2F'; // Forward slash
+DCL-C C_ASCII_0                      x'30'; // Number zero
+DCL-C C_ASCII_1                      x'31'; // Number one
+DCL-C C_ASCII_2                      x'32'; // Number two
+DCL-C C_ASCII_3                      x'33'; // Number three
+DCL-C C_ASCII_4                      x'34'; // Number four
+DCL-C C_ASCII_5                      x'35'; // Number five
+DCL-C C_ASCII_6                      x'36'; // Number six
+DCL-C C_ASCII_7                      x'37'; // Number seven
+DCL-C C_ASCII_8                      x'38'; // Number eight
+DCL-C C_ASCII_9                      x'39'; // Number nine
+DCL-C C_ASCII_COLON                  x'3A'; // Colon
+DCL-C C_ASCII_SEMI_COLON             x'3B'; // Semi-colon
+DCL-C C_ASCII_LESS_THAN_SYMBOL       x'3C'; // Less than symbol
+DCL-C C_ASCII_EQUAL_SIGN             x'3D'; // Equal sign
+DCL-C C_ASCII_GREATER_THAN_SYMBOL    x'3E'; // Greater than symbol
+DCL-C C_ASCII_QUESTION_MARK          x'3F'; // Question mark
+DCL-C C_ASCII_AT_SIGN                x'40'; // At sign
+DCL-C C_ASCII_UPA                    x'41'; // Uppercase A
+DCL-C C_ASCII_UPB                    x'42'; // Uppercase B
+DCL-C C_ASCII_UPC                    x'43'; // Uppercase C
+DCL-C C_ASCII_UPD                    x'44'; // Uppercase D
+DCL-C C_ASCII_UPE                    x'45'; // Uppercase E
+DCL-C C_ASCII_UPF                    x'46'; // Uppercase F
+DCL-C C_ASCII_UPG                    x'47'; // Uppercase G
+DCL-C C_ASCII_UPH                    x'48'; // Uppercase H
+DCL-C C_ASCII_UPI                    x'49'; // Uppercase I
+DCL-C C_ASCII_UPJ                    x'4A'; // Uppercase J
+DCL-C C_ASCII_UPK                    x'4B'; // Uppercase K
+DCL-C C_ASCII_UPL                    x'4C'; // Uppercase L
+DCL-C C_ASCII_UPM                    x'4D'; // Uppercase M
+DCL-C C_ASCII_UPN                    x'4E'; // Uppercase N
+DCL-C C_ASCII_UPO                    x'4F'; // Uppercase O
+DCL-C C_ASCII_UPP                    x'50'; // Uppercase P
+DCL-C C_ASCII_UPQ                    x'51'; // Uppercase Q
+DCL-C C_ASCII_UPR                    x'52'; // Uppercase R
+DCL-C C_ASCII_UPS                    x'53'; // Uppercase S
+DCL-C C_ASCII_UPT                    x'54'; // Uppercase T
+DCL-C C_ASCII_UPU                    x'55'; // Uppercase U
+DCL-C C_ASCII_UPV                    x'56'; // Uppercase V
+DCL-C C_ASCII_UPW                    x'57'; // Uppercase W
+DCL-C C_ASCII_UPX                    x'58'; // Uppercase X
+DCL-C C_ASCII_UPY                    x'59'; // Uppercase Y
+DCL-C C_ASCII_UPZ                    x'5A'; // Uppercase Z
+DCL-C C_ASCII_LEFT_BRACKET           x'5B'; // Left square bracket [
+DCL-C C_ASCII_BACKSLASH              x'5C'; // Backslash
+DCL-C C_ASCII_RIGHT_BRACKET          x'5D'; // Right square bracket ]
+DCL-C C_ASCII_CARET                  x'5E'; // Caret/circumflex
+DCL-C C_ASCII_UNDERSCORE             x'5F'; // Underscore
+DCL-C C_ASCII_GRAVE_ACCENT           x'60'; // Grave/accent
+DCL-C C_ASCII_LOA                    x'61'; // Lowercase a
+DCL-C C_ASCII_LOB                    x'62'; // Lowercase b
+DCL-C C_ASCII_LOC                    x'63'; // Lowercase c
+DCL-C C_ASCII_LOD                    x'64'; // Lowercase d
+DCL-C C_ASCII_LOE                    x'65'; // Lowercase e
+DCL-C C_ASCII_LOF                    x'66'; // Lowercase f
+DCL-C C_ASCII_LOG                    x'67'; // Lowercase g
+DCL-C C_ASCII_LOH                    x'68'; // Lowercase h
+DCL-C C_ASCII_LOI                    x'69'; // Lowercase i
+DCL-C C_ASCII_LOJ                    x'6A'; // Lowercase j
+DCL-C C_ASCII_LOK                    x'6B'; // Lowercase k
+DCL-C C_ASCII_LOL                    x'6C'; // Lowercase l
+DCL-C C_ASCII_LOM                    x'6D'; // Lowercase m
+DCL-C C_ASCII_LON                    x'6E'; // Lowercase n
+DCL-C C_ASCII_LOO                    x'6F'; // Lowercase o
+DCL-C C_ASCII_LOP                    x'70'; // Lowercase p
+DCL-C C_ASCII_LOQ                    x'71'; // Lowercase q
+DCL-C C_ASCII_LOR                    x'72'; // Lowercase r
+DCL-C C_ASCII_LOS                    x'73'; // Lowercase s
+DCL-C C_ASCII_LOT                    x'74'; // Lowercase t
+DCL-C C_ASCII_LOU                    x'75'; // Lowercase u
+DCL-C C_ASCII_LOV                    x'76'; // Lowercase v
+DCL-C C_ASCII_LOW                    x'77'; // Lowercase w
+DCL-C C_ASCII_LOX                    x'78'; // Lowercase x
+DCL-C C_ASCII_LOY                    x'79'; // Lowercase y
+DCL-C C_ASCII_LOZ                    x'7A'; // Lowercase z
+DCL-C C_ASCII_LEFT_BRACE             x'7B'; // Left curly brace {
+DCL-C C_ASCII_VERTICAL_BAR           x'7C'; // Vertical bar |
+DCL-C C_ASCII_RIGHT_BRACE            x'7D'; // Right curly brace }
+DCL-C C_ASCII_TILDE                  x'7E'; // Tilde
+DCL-C C_ASCII_DELETE                 x'7F'; // Delete

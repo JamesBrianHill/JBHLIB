@@ -31,17 +31,17 @@
 //
 // More information about compiler directives:
 // @see https://www.ibm.com/docs/en/i/7.5?topic=concepts-compiler-directives
-//--------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
 /IF DEFINED(CONSTANTS)
   /EOF
 /ELSE
   /DEFINE CONSTANTS
 /ENDIF
 
-//--------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
 // Define constant variables to be used globally.
 // @see https://www.ibm.com/docs/en/i/7.5?topic=statement-free-form-named-constant-definition
-//--------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
 
 // A single quote - this is useful for keeping code more readable when we need to concatenate a
 // single quote.

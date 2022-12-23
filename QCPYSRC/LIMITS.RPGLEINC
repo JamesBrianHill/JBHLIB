@@ -1,0 +1,67 @@
+**FREE
+// -------------------------------------------------------------------------------------------------
+// Description: Define constants for Db2, IFS, and RPG limits.
+//
+// @author James Brian Hill
+// @copyright Copyright (c) 2015 - 2023 by James Brian Hill
+// @license GNU General Public License version 3
+// @see https://www.gnu.org/licenses/gpl-3.0.en.html Gnu Public License version 3.0
+//
+// File System Limits:
+// @see https://www.ibm.com/docs/en/i/7.5?topic=systems-file-system-comparison
+// RPG Limits:
+// @see https://www.ibm.com/docs/en/i/7.5?topic=appendixes-appendix-rpg-iv-restrictions
+// SQL Limits:
+// @see https://www.ibm.com/docs/en/i/7.5?topic=reference-sql-limits
+// -------------------------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------------------------
+//   This program is free software: you can redistribute it and/or modify it under the terms of the
+// GNU General Public License as published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+//   This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+// without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+//
+//   You should have received a copy of the GNU General Public License along with this program. If
+// not, see <https://www.gnu.org/licenses/>.
+// -------------------------------------------------------------------------------------------------
+//   This source code was developed at www.pub400.com, a service provided by RZKH GmbH. Thank you!
+// -------------------------------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------------------------------
+//   This source member is meant to be /COPYd so the following compiler directives are added to
+// prevent this member from being added multiple times.
+//
+// More information about compiler directives:
+// @see https://www.ibm.com/docs/en/i/7.5?topic=concepts-compiler-directives
+// -------------------------------------------------------------------------------------------------
+/IF DEFINED(LIMITS)
+  /EOF
+/ELSE
+  /DEFINE LIMITS
+/ENDIF
+
+// -------------------------------------------------------------------------------------------------
+// DB2 limits
+// @see https://www.ibm.com/docs/en/i/7.5?topic=reference-sql-limits
+// -------------------------------------------------------------------------------------------------
+DCL-C C_DB2_COLUMN_NAME_MAX_LEN 128;
+DCL-C C_DB2_SCHEMA_NAME_MAX_LEN 128;
+DCL-C C_DB2_TABLE_NAME_MAX_LEN 128;
+DCL-C C_DB2_VARCHAR_MAX_LEN 32739;
+
+// -------------------------------------------------------------------------------------------------
+// File system limits
+// @see https://www.ibm.com/docs/en/i/7.5?topic=systems-file-system-comparison
+// -------------------------------------------------------------------------------------------------
+DCL-C C_IFS_DIR_NAME_MAX_LENGTH 255;
+
+// -------------------------------------------------------------------------------------------------
+// RPG limits
+// @see https://www.ibm.com/docs/en/i/7.5?topic=appendixes-appendix-rpg-iv-restrictions
+// -------------------------------------------------------------------------------------------------
+DCL-C C_RPG_CHAR_MAX_LEN 16773104;
+DCL-C C_RPG_DS_MAX_LEN 16773104;
+DCL-C C_RPG_VARCHAR_MAX_LEN 16773100;
